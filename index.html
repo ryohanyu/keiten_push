@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ケイテンプッシュ期待値計算機</title>
+  <style>
+    h1 {
+      font-size: 50px;
+      padding-left: 70px
+    }
+
+    input,
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 40px;
+    }
+
+
+    .p1 {
+      position: absolute;
+      left: 110px;
+      top: 180px;
+    }
+
+    .p2 {
+      position: absolute;
+      left: 150px;
+      top: 260px;
+    }
+
+    .p3 {
+      position: absolute;
+      left: 150px;
+      top: 340px;
+    }
+
+    .p4 {
+      position: absolute;
+      left: 150px;
+      top: 420px;
+    }
+
+    .p5 {
+      position: absolute;
+      left: 150px;
+      top: 500px;
+    }
+
+    .p6 {
+      position: absolute;
+      left: 150px;
+      top: 580px;
+    }
+
+    .p7 {
+      position: absolute;
+      left: 150px;
+      top: 660px;
+    }
+
+    .num{
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 180px;
+    }
+
+    .num1 {
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 260px;
+    }
+
+    .num2 {
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 420px;
+    }
+
+    .num3 {
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 580px;
+    }
+
+    .per1{
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 340px;
+    }
+
+    .per2{
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 500px;
+    }
+
+    .per3{
+      width: 260px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 660px;
+    }
+
+    .value {
+      font-size: 40px;
+    }
+
+    button {
+      width: 65px;
+      height: 40px;
+      position: absolute;
+      left: 480px;
+      top: 740px;
+    }
+
+    .result1 {
+      position: absolute;
+      left: 315px;
+      top: 820px;
+    }
+
+    .result2 {
+      position: absolute;
+      left: 315px;
+      top: 900px;
+    }
+
+    .result3 {
+      position: absolute;
+      left: 315px;
+      top: 980px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>ケイテンプッシュ期待値計算機</h1>
+
+  <p class="p1">テンパイ予想人数:</p>
+  <p class="p2">上家の打点予想:</p>
+  <p class="p3">上家への放銃率:</p>
+  <p class="p4">対面の打点予想:</p>
+  <p class="p5">対面への放銃率:</p>
+  <p class="p6">下家の打点予想:</p>
+  <p class="p7">下家への放銃率:</p>
+
+  <input list="number" id="num" name="num" class="num">
+  <datalist id="number">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+  </datalist>
+
+  <input list="number1" id="num1" name="num1" class="num1">
+  <datalist id="number1">
+    <option value="5300">
+    <option value="4500">
+    <option value="3900">
+    <option value="5800">
+    <option value="8000">
+    <option value="12000">
+  </datalist>
+
+  <input list="number2" id="num2" name="num2" class="num2">
+  <datalist id="number2">
+    <option value="5300">
+    <option value="4500">
+    <option value="3900">
+    <option value="5800">
+    <option value="8000">
+    <option value="12000">
+  </datalist>
+
+  <input list="number3" id="num3" name="num3" class="num3">
+  <datalist id="number3">
+    <option value="5300">
+    <option value="4500">
+    <option value="3900">
+    <option value="5800">
+    <option value="8000">
+    <option value="12000">
+  </datalist>
+
+  <input list="percent1" id="per1" name="per1" class="per1">
+  <datalist id="percent1">
+    <option value="0">
+    <option value="0.05">
+    <option value="0.1">
+    <option value="0.15">
+    <option value="0.2">
+    <option value="0.25">
+    <option value="0.3">
+    <option value="0.4">
+    <option value="0.5">
+    <option value="0.6">
+  </datalist>
+
+  <input list="percent2" id="per2" name="per2" class="per2">
+  <datalist id="percent2">
+    <option value="0">
+    <option value="0.05">
+    <option value="0.1">
+    <option value="0.15">
+    <option value="0.2">
+    <option value="0.25">
+    <option value="0.3">
+    <option value="0.4">
+    <option value="0.5">
+    <option value="0.6">
+  </datalist>
+
+  <input list="percent3" id="per3" name="per3" class="per3">
+  <datalist id="percent3">
+    <option value="0">
+    <option value="0.05">
+    <option value="0.1">
+    <option value="0.15">
+    <option value="0.2">
+    <option value="0.25">
+    <option value="0.3">
+    <option value="0.4">
+    <option value="0.5">
+    <option value="0.6">
+  </datalist>
+
+  <button onclick="calculate()">計算</button>
+
+  <p id="result1" class="result1"></p>
+  <p id="result2" class="result2"></p>
+  <p id="result3" class="result3"></p>
+
+  <script src="script.js"></script>
+  <!-- <button onclick="location.href='page_b.html'">ページ移動</button> -->
+</body>
+
+</html>
